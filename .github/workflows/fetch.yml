@@ -1,0 +1,27 @@
+name: 指定医療機関一覧の取得
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 毎日 10:00 JST。都の差し替えは月1回だが、差し替え日がずれても取りこぼさないよう毎日見る
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install openpyxl xlrd
+      - run: python scripts/fetch_tokyo.py
+      - name: 変わっていたらコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: 東京都 指定自立支援医療機関（精神通院）一覧を更新（自動）"
+          git push
