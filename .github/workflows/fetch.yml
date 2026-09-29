@@ -18,10 +18,11 @@ jobs:
           python-version: "3.12"
       - run: pip install openpyxl xlrd
       - run: python scripts/fetch_tokyo.py
+      - run: python scripts/build_site.py
       - name: 変わっていたらコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data site/data.json
           git diff --cached --quiet || git commit -m "data: 東京都 指定自立支援医療機関（精神通院）一覧を更新（自動）"
           git push

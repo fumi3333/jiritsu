@@ -1,0 +1,37 @@
+{
+  "name": "tokyo-jiritsu-seishin-tsuin-archive",
+  "title": "東京都 指定自立支援医療機関（精神通院医療）一覧 月次アーカイブ",
+  "description": "東京都福祉局が毎月差し替えて公開している指定一覧を、月ごとに保存したもの。data/tokyo/YYYY-MM/ に種類ごとの CSV、data/raw/tokyo/YYYY-MM/ に東京都の元ファイル（新規指定・廃止の一覧を含む）がある。",
+  "homepage": "https://fumiproject.dev/jiritsu/",
+  "licenses": [{ "name": "CC-BY-4.0", "path": "https://creativecommons.org/licenses/by/4.0/", "title": "Creative Commons Attribution 4.0" }],
+  "sources": [{
+    "title": "東京都福祉局「指定自立支援医療機関の情報提供（精神通院医療）」",
+    "path": "https://www.fukushi.metro.tokyo.lg.jp/shougai/jigyo/shougaifukushi/iryoshiteijoho_s"
+  }, {
+    "title": "東京都オープンデータカタログ t000054d0000000056",
+    "path": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000054d0000000056"
+  }],
+  "keywords": ["自立支援医療", "精神通院医療", "指定医療機関", "東京都", "オープンデータ", "アーカイブ"],
+  "temporal": { "start": "2026-04-01", "frequency": "monthly" },
+  "resources": [{
+    "name": "shitei-iryokikan",
+    "path": "data/tokyo/*/*.csv",
+    "format": "csv",
+    "encoding": "utf-8",
+    "schema": {
+      "fields": [
+        { "name": "code", "type": "string", "description": "東京都の一覧にある医療機関コード" },
+        { "name": "name", "type": "string", "description": "名称" },
+        { "name": "postal_code", "type": "string" },
+        { "name": "municipality", "type": "string", "description": "区市町村名（東京都の一覧の番号は外している）" },
+        { "name": "address", "type": "string" },
+        { "name": "phone", "type": "string" },
+        { "name": "designated_on", "type": "date", "description": "指定年月日（和暦を西暦に変換）" },
+        { "name": "renewed_on", "type": "date", "description": "更新年月日。東京都の注記：6年ごとの直近の更新年月日" },
+        { "name": "kind", "type": "string", "description": "byouin=病院・診療所 / yakkyoku=薬局 / houkan=訪問看護事業者等" },
+        { "name": "as_of", "type": "date", "description": "東京都の一覧の時点" },
+        { "name": "source_url", "type": "string", "description": "取得元ファイルの URL" }
+      ]
+    }
+  }]
+}
