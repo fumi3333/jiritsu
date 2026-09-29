@@ -1,7 +1,7 @@
 """data/tokyo の最新月から、画面用の JSON を作る。
 
 出力: site/data.json
-  {"as_of": "YYYY-MM-DD", "kinds": {...}, "munis": [...], "rows": [[kind, muni_idx, name, address, phone, designated_on], ...]}
+  {"as_of": "YYYY-MM-DD", "kinds": {...}, "munis": [...], "rows": [[kind, muni_idx, name, address, phone, designated_on, code], ...]}
 区市町村ごとに分けず1ファイルにしているのは、選んだ区がサーバーに伝わらないようにするため。
 """
 import csv
@@ -22,7 +22,7 @@ def main():
                 if r["municipality"] not in munis:
                     munis.append(r["municipality"])
                 rows.append([kind, munis.index(r["municipality"]), r["name"], r["address"],
-                             r["phone"], r["designated_on"]])
+                             r["phone"], r["designated_on"], r["code"]])
     out = {"as_of": as_of, "kinds": KINDS, "munis": munis, "rows": rows}
     dest = ROOT / "site/data.json"
     dest.parent.mkdir(exist_ok=True)
