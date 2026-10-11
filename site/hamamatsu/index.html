@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自立支援医療（精神通院）の指定薬局・病院をさがす｜浜松市・申請書のコードつき</title>
+<meta name="description" content="通っている薬局・病院の名前を入れると、浜松市の自立支援医療（精神通院）の指定を受けているかどうかと、申請書に書く医療機関コードが分かります。浜松市の公開データをもとにしています。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="自立支援医療（精神通院）の指定薬局・病院をさがす｜浜松市">
+<meta property="og:description" content="名前を入れると、指定を受けているかどうかと申請書に書くコードが分かります。浜松市の公開データをもとにしています。">
+<meta property="og:url" content="https://fumiproject.dev/jiritsu/hamamatsu/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yq3tbrhjfy");</script>
+<link rel="canonical" href="https://fumiproject.dev/jiritsu/hamamatsu/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "浜松市 指定自立支援医療機関（精神通院医療）一覧（検索用に整理）",
+  "description": "浜松市が公開している、自立支援医療（精神通院医療）の指定を受けた病院・診療所、薬局、訪問看護ステーションの一覧を、区ごとに絞り込んで探せるようにした検索ページです。",
+  "url": "https://fumiproject.dev/jiritsu/hamamatsu/",
+  "inLanguage": "ja",
+  "keywords": [
+    "自立支援医療",
+    "精神通院医療",
+    "指定医療機関",
+    "浜松市",
+    "薬局",
+    "訪問看護",
+    "オープンデータ"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "浜松市"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "ZAX",
+    "url": "https://fumiproject.dev/"
+  },
+  "isBasedOn": "https://www.city.hamamatsu.shizuoka.jp/syoghuku/welfare/obstacle/seishin/futan2.html",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://fumiproject.dev/jiritsu/hamamatsu/data.json"
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff; --surface: #f5f6f8; --text: #1a1a1c; --muted: #4d4f55;
+  --line: #d4d6dc; --accent: #0b4fb3; --accent-text: #ffffff; --focus: #f5a623;
+}
+@media not all {
+  :root:not([data-theme="light"]) {
+    --bg: #16171a; --surface: #202227; --text: #eceef2; --muted: #b3b6bd;
+    --line: #3a3d44; --accent: #7fb0ff; --accent-text: #0d1220; --focus: #f5a623;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.75 "Noto Sans JP", system-ui, -apple-system, "Hiragino Sans", sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 12px; font-weight: 700; }
+h2 { font-size: 1.15rem; margin: 40px 0 8px; font-weight: 700; }
+p { margin: 0 0 12px; }
+a { color: var(--accent); }
+.lead { font-size: 1.05rem; }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin: 20px 0; }
+label { display: block; font-weight: 700; margin: 0 0 6px; }
+select, input[type="search"] {
+  width: 100%; font: inherit; color: var(--text); background: var(--bg);
+  border: 1px solid var(--muted); border-radius: 6px; padding: 10px 12px; min-height: 48px;
+}
+.field { margin-bottom: 16px; }
+.kinds { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0 0 16px; }
+.kinds legend { font-weight: 700; margin-bottom: 6px; padding: 0; }
+.kinds label { font-weight: 400; margin: 0; }
+.kinds input { position: absolute; opacity: 0; }
+.kinds span {
+  display: inline-block; padding: 10px 16px; min-height: 44px; border: 1px solid var(--muted);
+  border-radius: 999px; cursor: pointer;
+}
+.kinds input:checked + span { background: var(--accent); color: var(--accent-text); border-color: var(--accent); font-weight: 700; }
+:focus-visible, .kinds input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+.count { font-weight: 700; margin: 8px 0 12px; }
+ul.list { list-style: none; margin: 0; padding: 0; }
+ul.list li { border-top: 1px solid var(--line); padding: 14px 2px; }
+ul.list li:last-child { border-bottom: 1px solid var(--line); }
+.name { font-weight: 700; font-size: 1.05rem; }
+.meta { color: var(--muted); font-size: 0.95rem; }
+.code { margin: 4px 0; }
+.code b { font-size: 1.4rem; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+.more { margin-top: 16px; font: inherit; padding: 10px 16px; min-height: 44px; border-radius: 6px;
+  border: 1px solid var(--accent); background: var(--bg); color: var(--accent); cursor: pointer; }
+details summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+details[open] summary { margin-bottom: 8px; }
+.office { border-top: 1px solid var(--line); padding: 10px 0; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>自立支援医療（精神通院）の指定薬局・病院をさがす（浜松市）</h1>
+  <p class="lead">自立支援医療（精神通院）の受給者証に書ける薬局・病院・訪問看護は、浜松市が指定したところだけです。区と町名から近くの病院・薬局を探すか、名前を入れると、指定を受けているかどうかと、申請書に書く医療機関コードを表示します。</p>
+  <p class="meta">申請書には、通院する医療機関等の名称などを書きます（出典：<a href="https://www.city.hamamatsu.shizuoka.jp/syoghuku/welfare/obstacle/seishin/futan2.html">浜松市「自立支援医療（精神通院）」</a>）。</p>
+
+  <div class="box">
+    <fieldset class="kinds" id="kinds">
+      <legend>種類</legend>
+    </fieldset>
+    <div class="field">
+      <label for="muni">区市町村</label>
+      <select id="muni" data-clarity-mask="true"><option value="">浜松市全体</option></select>
+    </div>
+    <div class="field" id="townField" hidden>
+      <label for="town">町名（例：池上、久が原）</label>
+      <select id="town" data-clarity-mask="true"><option value="">すべての町</option></select>
+    </div>
+    <div class="field" id="chomeField" hidden>
+      <label for="chome">丁目（住所の町名のあとの数字。例：6）</label>
+      <select id="chome" data-clarity-mask="true"><option value="">すべて</option></select>
+    </div>
+    <div class="field" id="stationField">
+      <label for="station">最寄りの駅から、近い順に探す（駅名を入れて選ぶ。例：蒲田、池袋）</label>
+      <input id="station" list="stationList" type="search" placeholder="駅名" autocomplete="off" data-clarity-mask="true">
+      <datalist id="stationList"></datalist>
+      <button type="button" id="here" style="margin-top:6px;padding:8px 12px;border:1px solid var(--line,#ccc);border-radius:6px;background:var(--card,#fff);cursor:pointer">現在地から探す</button>
+      <p class="meta" id="stationMsg" aria-live="polite"></p>
+    </div>
+    <div class="field">
+      <label for="q">名前・住所の一部（わからなければ空欄で可）</label>
+      <input id="q" type="search" placeholder="例：さくら薬局、〇〇クリニック、駅名" autocomplete="off" data-clarity-mask="true">
+    </div>
+  </div>
+
+  <p class="count" id="count" aria-live="polite" data-clarity-mask="true">一覧を読み込んでいます…</p>
+  <div id="none" hidden>
+    <p>見つからない時は、次のどちらかの可能性があります。</p>
+    <ul>
+      <li>名前の書き方がちがう：「医療法人社団」などを外して、名前の一部だけで試してください</li>
+      <li>その病院・薬局が指定を受けていない：受給者証には書けないので、病院・薬局に直接たずねてください</li>
+    </ul>
+  </div>
+  <ul class="list" id="list" data-clarity-mask="true"></ul>
+  <button class="more" id="more" hidden>さらに表示</button>
+
+  <details class="box" id="next" open><summary><b>この後：申請書をどこに出す？</b></summary><p>出す先は、病院・薬局の場所ではなく、<b>お住まいの区</b>の窓口です。</p><div class="field"><label for="homeMuni">住んでいる区</label><select id="homeMuni" data-clarity-mask="true"><option value="">選んでください</option></select></div><div id="madoguchi" data-clarity-mask="true"></div></details>
+
+  <h2>病院や薬局を変える時</h2><p>受給者証に書いた医療機関を変える時の手続きは、<a href="https://www.city.hamamatsu.shizuoka.jp/syoghuku/welfare/obstacle/seishin/futan2.html">浜松市の公式ページ</a>で確認してください。</p>
+
+  <h2>これからやりたいこと</h2>
+  <p>今できるのは、申請書に書く医療機関とコードを探すところまでです。</p>
+  <p>自立支援医療の申請は、診断書や保険の書類をそろえて区市町村の窓口に出すまでに、書類の不足などで何度も足を運ぶことがあります。制度を知っていても、この手続きの途中で止まってしまう人がいると考えています。</p>
+  <p>一部の自治体では、診断書が要らない更新や病院・薬局の変更を、マイナポータルから申請できるようになっています（例：<a href="https://www.city.hachioji.tokyo.jp/kurashi/welfare/005/004/p034456.html">八王子市</a>）。この流れを広げ、診断書を写真で送るだけでスマートフォンから申請を終えられる仕組みを、区市町村や都道府県と協力して作っていきたいと考えています。</p>
+
+  <h2>この一覧について</h2>
+  <p>並び順は浜松市の一覧のとおりです。医療機関の評価や順位は付けていません。最新の正確な情報は、浜松市のページと各医療機関で確認してください。</p>
+
+  <footer><p>データの更新日（静岡県オープンデータ上）：<span id="asof"></span>　出典：<a href="https://www.city.hamamatsu.shizuoka.jp/syoghuku/welfare/obstacle/seishin/futan2.html">浜松市「自立支援医療（精神通院）」</a>のオープンデータ（<a href="https://opendata.pref.shizuoka.jp/dataset/11990.html">静岡県オープンデータ</a>で CC BY 4.0 と表示。区の抽出と検索用の整形をしています）</p><p>この一覧は浜松市の公開ファイルを加工したものです。浜松市が内容を保証するものではありません。</p><p>アクセス解析に Microsoft Clarity を使っています（検索欄の文字と検索結果は記録しない設定）。</p><p><a href="../about/">このサイトについて（作った理由・運営者）</a>　<a href="../">東京都版</a>　<a href="../osaka/">大阪市版</a>　<a href="../kyoto/">京都市版</a>　作成：<a href="https://fumiproject.dev/">ZAX</a></p></footer>
+</main>
+<script>
+(async () => {
+  let PAGE = 50;
+  // 一覧は jiritsu リポジトリが毎日更新している。取れない時は同じ場所に置いた控えを使う
+  const load = async (u) => { const r = await fetch(u); if (!r.ok) throw 0; return r.json(); };
+  const $ = (id) => document.getElementById(id);
+  const muniSel = $("muni"), q = $("q"), list = $("list"), count = $("count"), more = $("more"), none = $("none");
+  const d = await load("data.json")
+    .catch(() => { count.textContent = "一覧を読み込めませんでした。時間をおいて、もう一度開いてください。"; throw 0; });
+  // 全角・半角、ひらがな・カタカナ、ハイフンや空白のちがいを無視して比べる
+  const norm = (s) => s.normalize("NFKC").replace(/[ぁ-ゖ]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
+    .replace(/[-‐‑‒–—―−ー－]/g, "-").replace(/\s+/g, "").toLowerCase();
+  d.rows.forEach((r) => {
+    r.key = norm(r[2] + r[3] + r[6]);
+    // 住所から区市町村名を外し、最初の数字の手前までを町名とする（例：大田区池上６－１ → 池上）
+    r.town = r[3].replace(/^浜松市/, "").replace(d.munis[r[1]], "").match(/^[^0-9０-９－-]+/)?.[0].trim() || "";
+    r.chome = (() => { const a = r.town ? r[3].normalize("NFKC").split(r.town.normalize("NFKC"))[1] : ""; const m = (a || "").match(/^\s*(\d{1,2})(?!\d)/); return m ? m[1] : ""; })();
+  });
+  const townSel = $("town"), townField = $("townField");
+  function fillTowns() {
+    const mi = muniSel.value, kind = document.querySelector("input[name=kind]:checked").value;
+    townSel.length = 1;
+    townField.hidden = mi === "";
+    if (mi === "") return;
+    const counts = {};
+    d.rows.forEach((r) => { if (r[1] === +mi && r[0] === kind && r.town) counts[r.town] = (counts[r.town] || 0) + 1; });
+    Object.keys(counts).sort((a, b) => a.localeCompare(b, "ja")).forEach((t) => townSel.add(new Option(`${t}（${counts[t]}）`, t)));
+  }
+  const chomeSel = $("chome"), chomeField = $("chomeField");
+  function fillChomes() {
+    const mi = muniSel.value, kind = document.querySelector("input[name=kind]:checked").value, town = townSel.value;
+    chomeSel.length = 1;
+    chomeField.hidden = true;
+    if (mi === "" || town === "") return;
+    const counts = {};
+    d.rows.forEach((r) => { if (r[1] === +mi && r[0] === kind && r.town === town && r.chome) counts[r.chome] = (counts[r.chome] || 0) + 1; });
+    const keys = Object.keys(counts).sort((a, b) => a - b);
+    if (keys.length < 2) return;
+    keys.forEach((c) => chomeSel.add(new Option(`${c}（${counts[c]}）`, c)));
+    chomeField.hidden = false;
+  }
+  // ---- 駅・現在地から近い順（2026-10-04）。住所の位置は国土地理院の住所検索で求めた概算。駅は国土数値情報（駅データ）----
+  let origin = null, originLabel = "";
+  const hav = (o, la, lo) => { const R = 6371000, p = Math.PI / 180; const a = Math.sin((la - o[0]) * p / 2) ** 2 + Math.cos(o[0] * p) * Math.cos(la * p) * Math.sin((lo - o[1]) * p / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(a)); };
+  const stIn = $("station"), stList = $("stationList"), stMsg = $("stationMsg"), stField = $("stationField");
+  const withCoords = d.rows.filter((r) => r[7] != null);
+  if (!withCoords.length) stField.hidden = true;
+  else {
+    const lats = withCoords.map((r) => r[7]), lons = withCoords.map((r) => r[8]);
+    const box = [Math.min(...lats) - 0.08, Math.max(...lats) + 0.08, Math.min(...lons) - 0.08, Math.max(...lons) + 0.08];
+    let stations = null;
+    fetch("../stations.json").then((r) => r.json()).then((s) => {
+      stations = {};
+      Object.entries(s).forEach(([n, ps]) => {
+        const inb = ps.filter(([la, lo]) => la >= box[0] && la <= box[1] && lo >= box[2] && lo <= box[3]);
+        if (inb.length) { stations[n] = inb; const o = document.createElement("option"); o.value = n; stList.append(o); }
+      });
+    }).catch(() => {});
+    stIn.addEventListener("change", () => {
+      const v = stIn.value.trim().replace(/駅$/, "");
+      if (!v) { origin = null; stMsg.textContent = ""; update(); return; }
+      if (stations && stations[v]) { origin = stations[v][0]; originLabel = v + "駅"; stMsg.textContent = ""; }
+      else { origin = null; stMsg.textContent = "この駅は、対象の地域に見つかりません。候補から選んでください。"; }
+      update();
+    });
+    $("here").addEventListener("click", () => {
+      if (!navigator.geolocation) { stMsg.textContent = "この端末では現在地を使えません。"; return; }
+      stMsg.textContent = "現在地を確認しています…";
+      navigator.geolocation.getCurrentPosition((p) => { origin = [p.coords.latitude, p.coords.longitude]; originLabel = "現在地"; stIn.value = ""; stMsg.textContent = "位置情報は、この端末の中だけで使い、送信しません。"; update(); },
+        () => { stMsg.textContent = "現在地を取得できませんでした。駅名を入れてください。"; });
+    });
+  }
+  $("asof").textContent = d.as_of.replace(/^(\d+)-(\d+)-(\d+)$/, (_, y, m, day) => `${y}年${+m}月${+day}日`);
+  d.munis.forEach((m, i) => muniSel.add(new Option(m, i)));
+  Object.entries(d.kinds).forEach(([k, label], i) => {
+    const l = document.createElement("label");
+    l.innerHTML = `<input type="radio" name="kind" value="${k}"${i === 0 ? " checked" : ""}><span>${label}</span>`;
+    $("kinds").append(l);
+  });
+  let shown = 0, hits = [];
+  function render(reset) {
+    if (reset) { list.textContent = ""; shown = 0; }
+    for (const r of hits.slice(shown, shown + PAGE)) {
+      const li = document.createElement("li");
+      const tel = r[4] ? `<a href="tel:${r[4].replace(/[^0-9]/g, "")}">${r[4]}</a>` : "";
+      li.innerHTML = `<div class="name"></div><div class="code">申請書に書くコード：<b></b></div><div class="meta addr"></div><div class="meta">${tel}</div>`;
+      li.querySelector(".name").textContent = r[2];
+      li.querySelector(".code b").textContent = r[6];
+      li.querySelector(".addr").textContent = r[3];
+      if (origin && r.dist != null) { const dd = document.createElement("div"); dd.className = "meta"; dd.textContent = `${originLabel}から約${r.dist < 1000 ? Math.round(r.dist / 10) * 10 + "m" : (r.dist / 1000).toFixed(1) + "km"}（住所からの概算の直線距離）`; li.append(dd); }
+      list.append(li);
+    }
+    shown = Math.min(shown + PAGE, hits.length);
+    more.hidden = shown >= hits.length;
+  }
+  function update() {
+    const mi = muniSel.value, kind = document.querySelector("input[name=kind]:checked").value;
+    const words = q.value.trim().split(/\s+/).map(norm).filter(Boolean);
+    none.hidden = true;
+    // 東京都全体のままで名前も空だと件数が多すぎるので、どちらかを入れてもらう
+    if (mi === "" && words.length === 0 && !origin) { hits = []; count.textContent = "名前を入れるか、区市町村を選んでください。"; render(true); return; }
+    const town = mi === "" ? "" : townSel.value;
+    const chome = (mi === "" || town === "" || chomeField.hidden) ? "" : chomeSel.value;
+    hits = d.rows.filter((r) => r[0] === kind && (mi === "" || r[1] === +mi) && (town === "" || r.town === town) && (chome === "" || r.chome === chome) && words.every((w) => r.key.includes(w)));
+    PAGE = origin ? 5 : 50;
+    if (origin) { hits.forEach((r) => { r.dist = r[7] == null ? null : hav(origin, r[7], r[8]); }); hits = hits.filter((r) => r.dist != null).sort((a, b) => a.dist - b.dist); }
+    count.textContent = `${mi === "" ? "浜松市全体" : d.munis[mi] + town + (chome ? chome + "丁目付近" : "")}の${d.kinds[kind]}：${hits.length}件`;
+    if (hits.length > 20 && mi !== "" && town === "") count.textContent += "（町名を選ぶと数件に絞れます）";
+    if (origin) count.textContent = `${originLabel}から近い順の${d.kinds[kind]}：${hits.length}件（近い${Math.min(5, hits.length)}件を表示。「もっと見る」で続きを表示）`;
+    none.hidden = hits.length > 0;
+    render(true);
+  }
+  muniSel.addEventListener("change", () => { fillTowns(); fillChomes(); update(); });
+  townSel.addEventListener("change", () => { fillChomes(); update(); });
+  chomeSel.addEventListener("change", update);
+  $("kinds").addEventListener("change", () => { const t = townSel.value; fillTowns(); townSel.value = [...townSel.options].some((o) => o.value === t) ? t : ""; fillChomes(); update(); });
+  q.addEventListener("input", update);
+  more.addEventListener("click", () => render(false));
+  update();
+
+})();
+</script>
+
+
+<script>
+(async () => {
+  const box = document.getElementById("madoguchi"), sel = document.getElementById("homeMuni");
+  const mg = await fetch("madoguchi.json").then((r) => r.json()).catch(() => ({}));
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const tel = (p) => `<a href="tel:${p.replace(/[^0-9]/g, "")}">${esc(p)}</a>`;
+  const map = (q) => `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Google マップで開く</a>`;
+  Object.keys(mg).filter((k) => !k.startsWith("_")).forEach((k) => sel.add(new Option(k, k)));
+  sel.addEventListener("change", () => {
+    const m = sel.value, o = mg[m];
+    if (!o) { box.innerHTML = ""; return; }
+    let h = `<div class="office"><div class="name">${esc(o.name)}</div>`;
+    if (o.offices) {
+      h += o.offices.map((f) => `<div class="meta">${esc(f.where)}　${tel(f.phone)}　${map("浜松市 " + f.where.replace("内", ""))}</div>`).join("");
+    } else {
+      h += `<div class="meta">〒${esc(o.postal)} ${esc(o.address)}</div>`;
+      if (o.phone) h += `<div class="meta">${esc(o.section)}　${tel(o.phone)}</div>`;
+      else h += `<div class="meta">電話番号は<a href="${esc(o.list_url)}" target="_blank" rel="noopener">${esc(m)}役所の担当一覧</a>で確認できます</div>`;
+      h += `<div class="meta">${map(o.address + " " + m + "役所")}</div>`;
+    }
+    h += "</div>";
+    if (mg._note) h += `<p class="meta">${esc(mg._note)}</p>`;
+    h += `<p class="meta">出典：<a href="${esc(mg._source)}" target="_blank" rel="noopener">公式ページ</a>（${esc(mg._checked)}に確認）</p>`;
+    box.innerHTML = h;
+  });
+})();
+</script>
+</body>
+</html>

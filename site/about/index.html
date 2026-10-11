@@ -11,7 +11,7 @@
   --bg: #ffffff; --surface: #f5f6f8; --text: #1a1a1c; --muted: #4d4f55;
   --line: #d4d6dc; --accent: #0b4fb3; --focus: #f5a623;
 }
-@media (prefers-color-scheme: dark) {
+@media not all {
   :root:not([data-theme="light"]) {
     --bg: #16171a; --surface: #202227; --text: #eceef2; --muted: #b3b6bd;
     --line: #3a3d44; --accent: #7fb0ff;
@@ -54,7 +54,7 @@ a { color: var(--accent); }
     <li>出典：<a href="https://www.fukushi.metro.tokyo.lg.jp/shougai/jigyo/shougaifukushi/iryoshiteijoho_s">東京都福祉局「指定自立支援医療機関の情報提供（精神通院医療）」</a>（東京都オープンデータカタログ <a href="https://catalog.data.metro.tokyo.lg.jp/dataset/t000054d0000000056">t000054d0000000056</a>、CC BY 4.0）。病院・診療所、薬局、訪問看護事業者等の3つの一覧を使い、毎月の新規指定・廃止の一覧もあわせて保存しています</li>
     <li>2026年4月1日時点の版から、月ごとに保存しています。それより前の版は、東京都のページから取得できませんでした</li>
     <li>毎日自動で東京都のページを確認し、一覧が差し替わったら保存します。保存したデータと仕組みは <a href="https://github.com/fumi3333/jiritsu">GitHub（fumi3333/jiritsu）</a> で公開しています</li>
-    <li>医療機関の評価や順位は付けていません。並び順は東京都の一覧のとおりです</li>
+    <li>このサイトに広告はなく、使うのに料金や登録は要りません。医療機関の評価や順位は付けていません。並び順は東京都の一覧のとおりです</li>
     <li>最新の正確な情報は、東京都のページと各医療機関で確認してください</li>
   </ul>
 
@@ -67,7 +67,7 @@ a { color: var(--accent); }
     <ul>
       <li>運営者・開発者：松田 晴史（屋号：ZAX / <a href="https://fumiproject.dev/">fumiproject.dev</a>）</li>
       <li>在籍：武蔵野大学 経済学部</li>
-      <li>連絡先：<a href="mailto:zax-official@fumiproject.dev">zax-official@fumiproject.dev</a></li>
+      <li>連絡先：<!--email_off--><a href="mailto:zax-official@fumiproject.dev">zax-official@fumiproject.dev</a><!--/email_off--></li>
     </ul>
   </div>
   <p>運営者自身が、自立支援医療（精神通院）を受けています。自分で手続きをした時は、何をどこに出せばいいのかが分からず、書類が足りなかったり、マイナンバーカードの期限切れで別の証明書が必要になったりして、役所に何度も通いました。</p>
